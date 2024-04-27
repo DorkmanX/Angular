@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { UserProfileComponentComponent } from '../user-profile-component/user-profile-component.component';
+
 import { MenuComponent } from '../menu/menu.component';
+import { AboutComponent } from './about/about.component';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
   declarations: [
-    UserProfileComponentComponent,
-    MenuComponent
+    MenuComponent,
+    AboutComponent,
+    TableComponent
   ],
   imports: [
     CommonModule
   ],
-  exports: [UserProfileComponentComponent]
+  exports: []
 })
 export class ProfileModuleModule { }
