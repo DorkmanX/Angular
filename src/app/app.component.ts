@@ -14,7 +14,7 @@ export class AppComponent {
   title = 'Angular';
 
   menuItems: MenuItem[] = [
-    { label: 'Table', path: '/table' },
-    { label: 'About', path: '/about' }
+    { label: 'Tablica', path: '/table' },
+    { label: 'O mnie', path: '/about' }
   ];
 }
