@@ -1,8 +1,0 @@
-<ul class="menu">
-    <li *ngFor="let item of items">
-      <a *ngIf="item.href" [href]="item.href">{{ item.label }}</a>
-      <button *ngIf="!item.href" (click)="onItemClick(item)">
-        {{ item.label }}
-      </button>
-    </li>
-</ul>

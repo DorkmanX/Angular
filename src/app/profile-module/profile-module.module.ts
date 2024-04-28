@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MenuComponent } from '../menu/menu.component';
+import { MenuComponent } from './menu/menu.component';
 import { AboutComponent } from './about/about.component';
 import { TableComponent } from './table/table.component';
 
@@ -14,6 +14,6 @@ import { TableComponent } from './table/table.component';
   imports: [
     CommonModule
   ],
-  exports: []
+  exports: [MenuComponent,TableComponent,AboutComponent]
 })
 export class ProfileModuleModule { }

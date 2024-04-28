@@ -1,5 +1,6 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router'; // Import the Router service
+
 
 interface MenuItem {
   label: string;
@@ -11,7 +12,8 @@ interface MenuItem {
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
-export class MyMenuComponent {
+
+export class MenuComponent {
   @Input() items: MenuItem[] = []; // Array of menu items
 
   constructor(private router: Router) {} // Inject the Router service
