@@ -4,7 +4,7 @@ import { DataService } from 'src/app/core/data.service';
 interface Book {
   title: string;
   author: string;
-  isbn: number;
+  genre: string;
 }
 
 
@@ -16,6 +16,7 @@ interface Book {
 export class TableComponent implements OnInit {
 
   data: Book[] = [];
+  selectedDataItem: Book | null = null;
   isLoading = false; // Flag for loading state
 
   constructor(private dataService: DataService) { }
@@ -27,5 +28,10 @@ export class TableComponent implements OnInit {
         this.data = data;
         this.isLoading = false;
       });
+  }
+
+  onEditItem(item: Book) {
+    this.selectedDataItem = item;
+    //TO DO: CHANGE DATA IN TABLE HERE
   }
 }

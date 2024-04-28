@@ -4,16 +4,20 @@ import { CommonModule } from '@angular/common';
 import { MenuComponent } from './menu/menu.component';
 import { AboutComponent } from './about/about.component';
 import { TableComponent } from './table/table.component';
+import { EditComponent } from './edit/edit.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     MenuComponent,
     AboutComponent,
-    TableComponent
+    TableComponent,
+    EditComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
-  exports: [MenuComponent,TableComponent,AboutComponent]
+  exports: [MenuComponent,TableComponent,AboutComponent,EditComponent]
 })
 export class ProfileModuleModule { }

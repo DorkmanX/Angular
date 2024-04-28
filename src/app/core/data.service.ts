@@ -6,19 +6,17 @@ import { Observable } from 'rxjs';
 export interface Book {
   title: string;
   author: string;
-  isbn: number;
+  genre: string;
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-
-  private apiUrl = 'get/books'; // Replace with your actual API URL
-
   constructor(private http: HttpClient) { }
 
   getData(): Observable<Book[]> {
-    return this.http.get<Book[]>(this.apiUrl);
+    let apiUrl = 'http://localhost:3000/get/books';
+    return this.http.get<Book[]>(apiUrl);
   }
 }
