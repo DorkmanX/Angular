@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 
 // Interface (optional) for your data structure
 export interface Book {
+  id: number;
   title: string;
   author: string;
   genre: string;

@@ -1,6 +1,7 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 interface Book {
+  id: number;
   title: string;
   author: string;
   genre: string;
@@ -15,7 +16,7 @@ interface Book {
 export class EditComponent{
 
   @Input() item: Book | null = null; // Receive selected item from parent
-  editedItem: Book = { title: "", author: "",genre: "" }; // Create a copy for editing
+  editedItem: Book = { id: 0,title: "", author: "",genre: "" }; // Create a copy for editing
 
   @Output() onItemEdited = new EventEmitter<Book>(); // Event to notify parent
 
@@ -32,6 +33,6 @@ export class EditComponent{
     this.onItemEdited.emit(this.editedItem);
 
     this.item = null;
-    this.editedItem = { title: "", author: "", genre: "" };
+    this.editedItem = { id: 0, title: "", author: "", genre: "" };
   }
 }
