@@ -1,25 +1,25 @@
 <div class="subpage_container">
-    <h1> Tablica książek </h1>
+    <h1 class="ct" > Tablica książek </h1>
     <div *ngIf="isLoading">Loading data...</div>
-    <table>
-        <thead>
-          <tr>
-            <th>Tytuł</th>
-            <th>Autor</th>
-            <th>Gatunek</th>
+    <table class="table_container">
+        <thead class="header">
+          <tr class="header">
+            <th class="header_row">Tytuł</th>
+            <th class="header_row">Autor</th>
+            <th class="header_row">Gatunek</th>
+            <th class="header_row">Operacja</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let item of data">
-            <td>{{ item.title }}</td>
-            <td>{{ item.author }}</td>
-            <td>{{ item.genre }}</td>
-            <td>
-              <button (click)="onEditItem(item)">Edytuj</button>
+            <td class="row_cell">{{ item.title }}</td>
+            <td class="row_cell">{{ item.author }}</td>
+            <td class="row_cell">{{ item.genre }}</td>
+            <td class="row_cell" (click)="onEditItem(item)"> Edytuj
             </td>
           </tr>
         </tbody>
       </table>
       
-      <edit *ngIf="selectedDataItem" [item]="selectedDataItem" (onItemEdited)="onEditItem($event)"></edit>
+      <edit *ngIf="editingVisible" [item]="selectedDataItem" (onItemEdited)="onEditItem($event)" (hideEditing)="hideEditing($event)"></edit>
 </div>

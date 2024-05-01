@@ -1,18 +1,18 @@
 <div *ngIf="item">
-    <h2>Edytuj rekord</h2>
+    <h1 class="ct">Edytuj rekord</h1>
     <form (ngSubmit)="onSave()">
-      <label for="id">ID (do odczytu):</label>
-      <input type="text" id="id" name="id" [value]="item.id" disabled>  
+      <label class="edit_label" for="id">ID (do odczytu):</label>
+      <input class="edit_input" type="text" id="id" name="id" [value]="item.id" disabled>  
       
-      <label for="title">Tytuł:</label>
-      <input type="text" id="title" name="title" [(ngModel)]="editedItem.title" required>
+      <label class="edit_label" for="title">Tytuł:</label>
+      <input class="edit_input" type="text" id="title" name="title" [(ngModel)]="editedItem.title" required>
   
-      <label for="author">Autor:</label>
-      <input type="text" id="author" name="author" [(ngModel)]="editedItem.author" required>
+      <label class="edit_label" for="author">Autor:</label>
+      <input class="edit_input" type="text" id="author" name="author" [(ngModel)]="editedItem.author" required>
 
-      <label for="title">Gatunek:</label>
-      <input type="text" id="genre" name="genre" [(ngModel)]="editedItem.genre" required>
+      <label class="edit_label" for="title">Gatunek:</label>
+      <input class="edit_input" type="text" id="genre" name="genre" [(ngModel)]="editedItem.genre" required>
 
-      <button type="submit">Zapisz</button>
+      <button class="save_button" type="submit">Zapisz</button>
     </form>
   </div>

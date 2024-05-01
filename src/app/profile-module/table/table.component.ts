@@ -19,6 +19,7 @@ export class TableComponent implements OnInit {
   data: Book[] = [];
   selectedDataItem: Book | null = null;
   isLoading = false; // Flag for loading state
+  editingVisible = false;
 
   constructor(private dataService: DataService) { }
 
@@ -33,6 +34,7 @@ export class TableComponent implements OnInit {
 
   onEditItem(item: Book) {
     this.selectedDataItem = item;
+    this.editingVisible = true;
     if(item){
       let index = this.data.findIndex(book => book.id === item.id);
       if(this.data[index].title !== item.title){
@@ -45,5 +47,10 @@ export class TableComponent implements OnInit {
         this.data[index].genre = item.genre;
       }
     }
+  }
+
+  hideEditing(visible: boolean)
+  {
+    this.editingVisible = visible;
   }
 }

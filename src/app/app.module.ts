@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module'; // Import the routing module
+import { AppRoutingModule } from './app-routing.module';
 import { ProfileModuleModule } from './profile-module/profile-module.module';
 import { HttpClientModule } from '@angular/common/http';
 

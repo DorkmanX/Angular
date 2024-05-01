@@ -8,3 +8,29 @@
     justify-content: center;
     align-content: center;
 }
+
+.ct {
+    text-align: center;
+}
+
+.header_row {
+    background-color: green;
+    font: 20px arial black;
+    justify-content: center;
+}
+
+.header {
+    width: 100%;
+    position: relative;
+}
+
+.table_container {
+    position: relative;
+    width: 100%;
+}
+
+.row_cell {
+    text-align: center;
+    font: 16px arial black;
+    background-color: grey;
+}

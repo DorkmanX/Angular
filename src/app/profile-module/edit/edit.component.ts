@@ -15,16 +15,16 @@ interface Book {
 
 export class EditComponent{
 
-  @Input() item: Book | null = null; // Receive selected item from parent
-  editedItem: Book = { id: 0,title: "", author: "",genre: "" }; // Create a copy for editing
+  @Input() item: Book | null = null;
+  editedItem: Book = { id: 0,title: "", author: "",genre: "" };
 
-  @Output() onItemEdited = new EventEmitter<Book>(); // Event to notify parent
+  @Output() onItemEdited = new EventEmitter<Book>();
+  @Output() hideEditing = new EventEmitter<boolean>();
 
   constructor() { }
 
   ngOnInit() {
     if (this.item) {
-      // Copy item properties for editing
       this.editedItem = Object.assign({}, this.item);
     }
   }
@@ -34,5 +34,6 @@ export class EditComponent{
 
     this.item = null;
     this.editedItem = { id: 0, title: "", author: "", genre: "" };
+    this.hideEditing.emit(false);
   }
 }
