@@ -1,10 +1,10 @@
 import { Component, Input } from '@angular/core';
-import { Router } from '@angular/router'; // Import the Router service
+import { Router } from '@angular/router';
 
 
 interface MenuItem {
   label: string;
-  path: string; // Path for routing (instead of href)
+  path: string;
 }
 
 @Component({
@@ -14,11 +14,11 @@ interface MenuItem {
 })
 
 export class MenuComponent {
-  @Input() items: MenuItem[] = []; // Array of menu items
+  @Input() items: MenuItem[] = [];
 
-  constructor(private router: Router) {} // Inject the Router service
+  constructor(private router: Router) {}
 
   onMenuItemClick(item: MenuItem) {
-    this.router.navigate([item.path]); // Navigate to the specified path
+    this.router.navigate([item.path]);
   }
 }

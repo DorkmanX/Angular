@@ -18,7 +18,7 @@ export class TableComponent implements OnInit {
 
   data: Book[] = [];
   selectedDataItem: Book | null = null;
-  isLoading = false; // Flag for loading state
+  isLoading = false;
   editingVisible = false;
 
   constructor(private dataService: DataService) { }

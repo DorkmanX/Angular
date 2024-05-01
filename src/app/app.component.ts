@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 interface MenuItem {
   label: string;
-  path: string; // Path for routing (instead of href)
+  path: string;
 }
 
 @Component({
