@@ -1,18 +1,18 @@
 <div *ngIf="item">
     <h2>Edytuj rekord</h2>
     <form (ngSubmit)="onSave()">
-      <label for="id">ID (Read-only):</label>
+      <label for="id">ID (do odczytu):</label>
       <input type="text" id="id" name="id" [value]="item.id" disabled>  
       
-      <label for="title">Title:</label>
+      <label for="title">Tytuł:</label>
       <input type="text" id="title" name="title" [(ngModel)]="editedItem.title" required>
   
-      <label for="author">Title:</label>
+      <label for="author">Autor:</label>
       <input type="text" id="author" name="author" [(ngModel)]="editedItem.author" required>
 
-      <label for="title">Title:</label>
+      <label for="title">Gatunek:</label>
       <input type="text" id="genre" name="genre" [(ngModel)]="editedItem.genre" required>
 
-      <button type="submit">Save</button>
+      <button type="submit">Zapisz</button>
     </form>
   </div>
