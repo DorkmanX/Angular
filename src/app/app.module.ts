@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ProfileModuleModule } from './profile-module/profile-module.module';
+import { ProfileModuleModule } from './books/books.module';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
